@@ -505,14 +505,10 @@
     </group>
   </macro>
   <macro name="locator">
-    <choose>
-      <if match="none" position="ibid">
         <group delimiter=" ">
           <label variable="locator" form="short"/>
           <text variable="locator"/>
         </group>
-      </if>
-    </choose>
   </macro>
   <macro name="locator-here">
     <group delimiter=" ">
@@ -663,7 +659,7 @@
           <if match="any" position="first">
             <text macro="bib-layout"/>
           </if>
-          <else-if match="any" position="ibid ibid-with-locator">
+          <else-if match="any" position=" ibid ibid-with-locator">
             <text term="ibid" form="short"/>
           </else-if>
           <else>
